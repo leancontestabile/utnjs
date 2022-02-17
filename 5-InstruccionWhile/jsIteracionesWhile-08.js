@@ -1,8 +1,7 @@
 /*
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 sumar los que son positivos y multiplicar los negativos.*/
-function mostrar()
-{
+function mostrar() {
 	let contador;
 	let acumulador;
 	let numero;
@@ -14,9 +13,10 @@ function mostrar()
 	while (numero != "salir") {
 		if (numero >= 0) {
 			acumulador = acumulador + parseInt(numero);
+		} else if (multiplicacion == 0) {
+			multiplicacion = parseFloat(numero)
 		} else {
-			multiplicacion = multiplicacion * parseInt(numero)
-			//problema con la multiplicacion
+			multiplicacion = multiplicacion * parseFloat(numero)
 		}
 		numero = prompt("Ingrese un numero o escriba salir");
 	}
